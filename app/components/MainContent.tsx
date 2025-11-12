@@ -2,7 +2,7 @@
 
 export default function MainContent() {
     return (
-        <main className="w-full pb-16 mt-6">
+        <main className="w-full pb-6  mt-6">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
                 <div className="w-full grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 items-start">
                     {/* Left: Video */}
