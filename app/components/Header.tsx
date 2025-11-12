@@ -66,22 +66,22 @@ const XIcon = () => (
 )
 
 const socialLinks = [
-    { name: 'WhatsApp', icon: WhatsAppIcon, bg: '#25D366', href: '#' },
-    { name: 'Facebook', icon: FacebookIcon, bg: '#1877F2', href: '#' },
-    { name: 'Instagram', icon: InstagramIcon, bg: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', href: '#' },
-    { name: 'YouTube', icon: YouTubeIcon, bg: '#FF0000', href: '#' },
-    { name: 'TikTok', icon: TikTokIcon, bg: '#000000', href: '#' },
-    { name: 'X', icon: XIcon, bg: '#000000', href: '#' },
+    { name: 'WhatsApp', icon: WhatsAppIcon, bg: '#25D366', href: 'https://whatsapp.com/channel/0029VbBK3EaA89MjgYQW7n2t' },
+    { name: 'Facebook', icon: FacebookIcon, bg: '#1877F2', href: 'https://www.facebook.com/jarayid' },
+    { name: 'Instagram', icon: InstagramIcon, bg: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', href: 'https://www.instagram.com/jarayidnews' },
+    { name: 'YouTube', icon: YouTubeIcon, bg: '#FF0000', href: 'https://www.youtube.com/@Jarayidcom-dg9yu' },
+    { name: 'TikTok', icon: TikTokIcon, bg: '#000000', href: 'https://www.tiktok.com/@jarayid' },
+    { name: 'X', icon: XIcon, bg: '#000000', href: 'https://x.com/AiArabicNews' },
 ]
 
 type CountdownItemProps = { value: number; label: string }
 
 const CountdownItem = ({ value, label }: CountdownItemProps) => (
-    <div className="flex flex-col items-center justify-center flex-1 min-w-[110px] px-4 sm:px-6 py-6 border-r border-white/20 last:border-r-0 last:pr-4 sm:last:pr-6">
-        <div className="text-[38px] font-bold text-white leading-none mb-1">
+    <div className="flex flex-col items-center justify-center flex-1 min-w-[70px] lg:min-w-[80px] px-3 sm:px-4 py-4 border-r border-white/20 last:border-r-0 last:pr-3 sm:last:pr-4">
+        <div className="text-[28px] lg:text-[32px] font-bold text-white leading-none mb-1">
             {String(value).padStart(2, '0')}
         </div>
-        <div className="text-base font-medium text-white/80">
+        <div className="text-sm font-medium text-white/80">
             {label}
         </div>
     </div>
@@ -90,26 +90,23 @@ const CountdownItem = ({ value, label }: CountdownItemProps) => (
 // Countdown Timer Component
 const CountdownTimer = () => {
     const [timeLeft, setTimeLeft] = useState({
-        days: 3,
-        hours: 12,
-        minutes: 12,
-        seconds: 12
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
     })
+    const [isReady, setIsReady] = useState(false)
 
     useEffect(() => {
-        const targetDate = new Date()
-        targetDate.setDate(targetDate.getDate() + 3)
-        targetDate.setHours(targetDate.getHours() + 12)
-        targetDate.setMinutes(targetDate.getMinutes() + 12)
-        targetDate.setSeconds(targetDate.getSeconds() + 12)
+        const targetDate = new Date('2025-11-16T00:00:00')
 
-        const timer = setInterval(() => {
+        const calculateTime = () => {
             const now = new Date().getTime()
             const distance = targetDate.getTime() - now
 
             if (distance < 0) {
-                clearInterval(timer)
                 setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+                setIsReady(true)
                 return
             }
 
@@ -119,17 +116,36 @@ const CountdownTimer = () => {
                 minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
                 seconds: Math.floor((distance % (1000 * 60)) / 1000)
             })
-        }, 1000)
+            setIsReady(true)
+        }
+
+        // Calculate immediately
+        calculateTime()
+
+        // Then update every second
+        const timer = setInterval(calculateTime, 1000)
 
         return () => clearInterval(timer)
     }, [])
 
+    if (!isReady) {
+        return (
+            <div className="w-full lg:w-[360px] xl:w-[380px] 2xl:w-[420px] mt-3 flex flex-col items-center gap-3 text-center">
+                <div className="w-full text-sm text-gray-700 font-medium text-center">
+                    Jarayid.com بدأ العدّ التنازلي لإطلاق
+                </div>
+                <div className="relative isolate flex w-full h-[90px] lg:h-[96px] items-center justify-center overflow-hidden rounded-[12px] shadow-[0_0_8.6px_rgba(0,0,0,0.12)] bg-gray-200 animate-pulse">
+                </div>
+            </div>
+        )
+    }
+
     return (
-        <div className="w-full lg:w-[440px] xl:w-[440px] 2xl:w-[480px] mt-4 flex flex-col items-center gap-4 text-center">
+        <div className="w-full lg:w-[360px] xl:w-[380px] 2xl:w-[420px] mt-3 flex flex-col items-center gap-3 text-center">
             <div className="w-full text-sm text-gray-700 font-medium text-center">
                 Jarayid.com بدأ العدّ التنازلي لإطلاق
             </div>
-            <div className="relative isolate flex w-full h-[112px] items-stretch overflow-hidden rounded-[16px] shadow-[0_0_8.6px_rgba(0,0,0,0.12)]">
+            <div className="relative isolate flex w-full h-[90px] lg:h-[96px] items-stretch overflow-hidden rounded-[12px] shadow-[0_0_8.6px_rgba(0,0,0,0.12)]">
                 <Image
                     src="/bg-1.png"
                     alt=""
@@ -141,11 +157,11 @@ const CountdownTimer = () => {
                 <CountdownItem value={timeLeft.hours} label="Hours" />
                 <CountdownItem value={timeLeft.minutes} label="Minutes" />
                 <div className="hidden lg:flex flex-1 border-r border-white/20 last:border-r-0">
-                    <div className="flex flex-col items-center justify-center flex-1 min-w-[110px] px-6 py-6">
-                        <div className="text-[38px] font-bold text-white leading-none mb-1">
+                    <div className="flex flex-col items-center justify-center flex-1 min-w-[80px] px-4 py-4">
+                        <div className="text-[32px] font-bold text-white leading-none mb-1">
                             {String(timeLeft.seconds).padStart(2, '0')}
                         </div>
-                        <div className="text-base font-medium text-white/80">
+                        <div className="text-sm font-medium text-white/80">
                             Seconds
                         </div>
                     </div>
@@ -160,20 +176,20 @@ export function HeaderContent() {
 
     return (
         <header className="w-full bg-white">
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 mt-6 md:mt-8 lg:mt-10 pb-3">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 mt-4 md:mt-6 lg:mt-8 pb-2">
                 {/* Mobile/Tablet Header - Stacked Vertically */}
-                <div className="flex lg:hidden flex-col items-center gap-6 md:gap-8">
+                <div className="flex lg:hidden flex-col items-center gap-4 md:gap-6">
                     {/* Logo & Coming Soon */}
-                    <div className="flex flex-col items-center gap-2 md:gap-3 w-full">
+                    <div className="flex flex-col items-center gap-2 w-full">
                         <Link href={logoHref} className="inline-block">
-                            <h1 className={`text-[28px] sm:text-[32px] md:text-[36px] font-bold ${libreCaslonText.className} whitespace-nowrap`}>
+                            <h1 className={`text-[24px] sm:text-[28px] md:text-[32px] font-bold ${libreCaslonText.className} whitespace-nowrap`}>
                                 <span className="text-black">Jarayid</span>
                                 <span className="text-[#0866FF]">.com</span>
                             </h1>
                         </Link>
                         <div className={`text-center ${inter.className}`}>
-                            <span className="text-[20px] sm:text-[24px] md:text-[28px] font-semibold text-gray-800">Coming </span>
-                            <span className="text-[20px] sm:text-[24px] md:text-[28px] font-semibold text-pink-500">Soon</span>
+                            <span className="text-[18px] sm:text-[20px] md:text-[24px] font-semibold text-gray-800">Coming </span>
+                            <span className="text-[18px] sm:text-[20px] md:text-[24px] font-semibold text-pink-500">Soon</span>
                         </div>
                     </div>
 
@@ -183,14 +199,14 @@ export function HeaderContent() {
                     </div>
 
                     {/* Social Media */}
-                    <div className="flex flex-col items-center gap-4 w-full max-w-sm">
-                        <div className="flex items-center gap-3 flex-wrap justify-center">
+                    <div className="flex flex-col items-center gap-3 w-full max-w-sm">
+                        <div className="flex items-center gap-2.5 flex-wrap justify-center">
                             {socialLinks.map((social) => (
                                 <a
                                     key={social.name}
                                     href={social.href}
                                     aria-label={social.name}
-                                    className="w-[32px] h-[32px] sm:w-[34px] sm:h-[34px] rounded-full flex items-center justify-center text-white transition-transform hover:scale-110 shadow-sm"
+                                    className="w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] rounded-full flex items-center justify-center text-white transition-transform hover:scale-110 shadow-sm"
                                     style={{ background: social.bg }}
                                 >
                                     <social.icon />
@@ -198,8 +214,8 @@ export function HeaderContent() {
                             ))}
                         </div>
                         <div className="text-center w-full">
-                            <div className="text-base md:text-lg font-bold text-gray-800 mb-2 md:mb-3">تابعنا</div>
-                            <div className="text-sm md:text-base leading-relaxed">
+                            <div className="text-sm md:text-base font-bold text-gray-800 mb-2">تابعنا</div>
+                            <div className="text-xs md:text-sm leading-relaxed">
                                 تابعونا على وسائل التواصل الاجتماعي<br />
                                 وكونوا أول من يعلم بالإطلاق<br />
                                 Jarayid.com
@@ -211,14 +227,14 @@ export function HeaderContent() {
                 {/* Desktop Header - Using Flex with Absolute Center */}
                 <div className="hidden lg:flex lg:justify-between lg:items-start relative">
                     {/* Left: Social Media */}
-                    <div className="flex flex-col items-center gap-[17px] w-full max-w-[265px] flex-shrink-0">
-                        <div className="flex items-center gap-[13px] justify-center">
+                    <div className="flex flex-col items-center gap-3 w-full max-w-[240px] flex-shrink-0">
+                        <div className="flex items-center gap-2.5 justify-center">
                             {socialLinks.map((social) => (
                                 <a
                                     key={social.name}
                                     href={social.href}
                                     aria-label={social.name}
-                                    className="w-[34px] h-[34px] rounded-full flex items-center justify-center text-white transition-transform hover:scale-110 shadow-sm"
+                                    className="w-[30px] h-[30px] rounded-full flex items-center justify-center text-white transition-transform hover:scale-110 shadow-sm"
                                     style={{ background: social.bg }}
                                 >
                                     <social.icon />
@@ -226,8 +242,8 @@ export function HeaderContent() {
                             ))}
                         </div>
                         <div className="text-center w-full">
-                            <div className="text-lg font-bold text-gray-800 mb-4">تابعنا</div>
-                            <div className="text-base leading-relaxed">
+                            <div className="text-base font-bold text-gray-800 mb-3">تابعنا</div>
+                            <div className="text-sm leading-relaxed">
                                 تابعونا على وسائل التواصل الاجتماعي<br />
                                 وكونوا أول من يعلم بالإطلاق<br />
                                 Jarayid.com
@@ -236,16 +252,16 @@ export function HeaderContent() {
                     </div>
 
                     {/* Center: Logo & Coming Soon - Absolutely Centered */}
-                    <div className="absolute left-1/2 -translate-x-1/2 xl:-translate-x-[60%] flex flex-col items-center gap-3 mt-10">
+                    <div className="absolute left-1/2 -translate-x-1/2 xl:-translate-x-[60%] flex flex-col items-center gap-2 mt-6">
                         <Link href={logoHref} className="inline-block">
-                            <h1 className={`text-[40px] font-bold ${libreCaslonText.className} whitespace-nowrap`}>
+                            <h1 className={`text-[32px] xl:text-[36px] font-bold ${libreCaslonText.className} whitespace-nowrap`}>
                                 <span className="text-black">Jarayid</span>
                                 <span className="text-[#0866FF]">.com</span>
                             </h1>
                         </Link>
                         <div className={`text-center mt-1 ${inter.className}`}>
-                            <span className="text-[30px] font-semibold text-gray-800">Coming </span>
-                            <span className="text-[30px] font-semibold text-red-500">Soon</span>
+                            <span className="text-[24px] xl:text-[26px] font-semibold text-gray-800">Coming </span>
+                            <span className="text-[24px] xl:text-[26px] font-semibold text-red-500">Soon</span>
                         </div>
                     </div>
 
