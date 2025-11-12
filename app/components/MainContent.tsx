@@ -23,9 +23,8 @@ export default function MainContent() {
 
                     {/* Right: Text Content */}
                     <div className="flex flex-col w-full lg:w-[360px] xl:w-[380px] 2xl:w-[420px] lg:h-full h-auto bg-white border border-[#B4BFCC] rounded-[8px] lg:justify-self-end overflow-hidden">
-                        <div className="flex items-center justify-end gap-2 px-3 pt-2.5 pb-2 border-b border-gray-200 w-full flex-shrink-0">
+                        <div className="flex items-center justify-end gap-2 px-3 pt-2.5 pb-2  border-gray-200 w-full flex-shrink-0">
                             <span className="text-sm lg:text-sm xl:text-base 2xl:text-lg font-bold text-gray-800">البرنامج النصي</span>
-                            <span className="text-pink-500 text-base lg:text-base xl:text-lg 2xl:text-xl">+</span>
                         </div>
 
                         <div className="flex-1 px-3 py-2.5 overflow-hidden flex flex-col">
