@@ -10,7 +10,7 @@ export default function MainContent() {
                         <div className="relative w-full h-full rounded-[10px] overflow-hidden shadow-lg bg-gray-900">
                             <iframe
                                 className="absolute inset-0 w-full h-full"
-                                src="https://www.youtube.com/embed/dQw4w9WgXcQ?list=RDdQw4w9WgXcQ&start_radio=1"
+                                src="https://www.youtube.com/embed/ka3RnEKCwWM"
                                 title="YouTube video player"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
