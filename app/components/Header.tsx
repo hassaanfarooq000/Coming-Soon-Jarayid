@@ -140,7 +140,16 @@ const CountdownTimer = () => {
                 <CountdownItem value={timeLeft.days} label="Days" />
                 <CountdownItem value={timeLeft.hours} label="Hours" />
                 <CountdownItem value={timeLeft.minutes} label="Minutes" />
-                <CountdownItem value={timeLeft.seconds} label="Seconds" />
+                <div className="hidden lg:flex flex-1 border-r border-white/20 last:border-r-0">
+                    <div className="flex flex-col items-center justify-center flex-1 min-w-[110px] px-6 py-6">
+                        <div className="text-[38px] font-bold text-white leading-none mb-1">
+                            {String(timeLeft.seconds).padStart(2, '0')}
+                        </div>
+                        <div className="text-base font-medium text-white/80">
+                            Seconds
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
@@ -236,7 +245,7 @@ export function HeaderContent() {
                         </Link>
                         <div className={`text-center mt-1 ${inter.className}`}>
                             <span className="text-[30px] font-semibold text-gray-800">Coming </span>
-                            <span className="text-[30px] font-semibold text-pink-500">Soon</span>
+                            <span className="text-[30px] font-semibold text-red-500">Soon</span>
                         </div>
                     </div>
 
