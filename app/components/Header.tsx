@@ -77,7 +77,7 @@ const socialLinks = [
 type CountdownItemProps = { value: number; label: string }
 
 const CountdownItem = ({ value, label }: CountdownItemProps) => (
-    <div className="flex flex-col items-center justify-center flex-1 min-w-[110px] px-6 py-6 border-r border-white/20 last:border-r-0">
+    <div className="flex flex-col items-center justify-center flex-1 min-w-[110px] px-4 sm:px-6 py-6 border-r border-white/20 last:border-r-0 last:pr-4 sm:last:pr-6">
         <div className="text-[38px] font-bold text-white leading-none mb-1">
             {String(value).padStart(2, '0')}
         </div>
