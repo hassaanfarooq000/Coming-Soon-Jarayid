@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-y-auto scrollbar-hide lg:overflow-hidden xl:overflow-hidden 2xl:overflow-hidden`}
       >
         {gaTrackingId && (
           <>

@@ -4,25 +4,23 @@
 export default function MainContent() {
     return (
         <main className="w-full mt-3 lg:mt-4">
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
-                <div className="w-full grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 lg:items-stretch items-start">
+            <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 mb-3">
+                <div className="w-full grid grid-cols-1 lg:grid-cols-[2.5fr_1fr] xl:grid-cols-[2.8fr_1fr] 2xl:grid-cols-[3fr_1fr] gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 lg:items-stretch items-start">
                     {/* Left: Video */}
-                    <div className="relative w-full aspect-[900/566] lg:max-w-[780px] xl:max-w-[850px] 2xl:max-w-[950px]">
-                        <div className="relative w-full h-full rounded-[8px] overflow-hidden shadow-lg bg-gray-900">
-                            <iframe
-                                className="absolute inset-0 w-full h-full"
-                                src="https://www.youtube.com/embed/ka3RnEKCwWM"
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                            ></iframe>
-                        </div>
+                    <div className="relative w-full min-h-[320px] sm:min-h-[360px] md:min-h-[420px] lg:min-h-[480px] xl:min-h-[540px] 2xl:min-h-[580px] rounded-[8px] overflow-hidden shadow-lg bg-gray-900 pb-[56.25%]">
+                        <iframe
+                            className="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/ka3RnEKCwWM"
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                        ></iframe>
                     </div>
 
                     {/* Right: Text Content */}
-                    <div className="flex flex-col w-full lg:w-[360px] xl:w-[380px] 2xl:w-[420px] lg:h-full h-auto bg-white border border-[#B4BFCC] rounded-[8px] lg:justify-self-end overflow-hidden">
+                    <div className="flex flex-col w-full lg:w-[360px] xl:w-[380px] 2xl:w-[420px] h-auto lg:h-full bg-white border border-[#B4BFCC] rounded-[8px] lg:justify-self-end overflow-hidden min-h-[320px] sm:min-h-[360px] md:min-h-[420px] lg:min-h-[480px] xl:min-h-[540px] 2xl:min-h-[580px]">
                         <div className="flex items-center justify-end gap-2 px-3 pt-2.5 pb-2  border-gray-200 w-full flex-shrink-0">
                             <span className="text-sm lg:text-sm xl:text-base 2xl:text-lg font-bold text-gray-800">البرنامج النصي</span>
                         </div>
@@ -83,9 +81,24 @@ export default function MainContent() {
                                         الإشعارات الذكية — تُبقيك <bdi dir="ltr">Jarayid.com</bdi>&rlm; على تواصلٍ فوري
                                     </span>
                                     <span className="block">
-                                    ✨ القارئ الذكي — ميزة مبتكرة تتيح لك الاستماع إلى أي خبرٍ صوتياً
+                                        ✨ القارئ الذكي — ميزة مبتكرة تتيح لك الاستماع إلى أي خبرٍ صوتياً
                                     </span>
                                 </div>
+
+                                {/* Section 4 */}
+                                <div
+                                    dir="rtl"
+                                    className="flex flex-col gap-1.5 text-right text-[0.7rem] sm:text-[0.72rem] lg:text-[0.74rem] xl:text-[0.78rem] 2xl:text-[0.84rem] text-gray-700 leading-[1.55] xl:leading-relaxed"
+                                >
+                                    <span>🎙️ ومع <bdi dir="ltr">Jarayid.ai</bdi>&rlm;، استمتع بنشراتٍ إخباريّة يوميّة</span>
+                                    <span>بصوتٍ وصورةٍ من إنتاج الذكاء الاصطناعي&nbsp;—</span>
+                                    <span>تواكب الحدث فور وقوعه.</span>
+                                    <span>💡 مجاني بالكامل&nbsp;—&nbsp;بلا حواجز…</span>
+                                    <span>فقط أخبار دقيقة وسريعة، سهلة الفهم ومبسّطة.</span>
+                                    <span>ذكي، سريع، ومجاني للجميع — <bdi dir="ltr">Jarayid.com</bdi>&rlm;</span>
+                                    <span>تعيد تعريف الصحافة الرقميّة في العالم العربي <bdi dir="ltr">Jarayid.com</bdi>&rlm;</span>
+                                </div>
+
 
                             </div>
                         </div>
