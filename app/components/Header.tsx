@@ -176,7 +176,7 @@ export function HeaderContent() {
 
     return (
         <header className="w-full bg-white">
-            <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 mt-1 md:mt-6 lg:mt-8 pb-2">
+            <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 md:mt-6  pb-2">
                 {/* Mobile/Tablet Header - Stacked Vertically */}
                 <div className="flex lg:hidden flex-col items-center gap-4 md:gap-6">
                     {/* Logo & Coming Soon */}
