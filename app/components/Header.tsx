@@ -131,7 +131,7 @@ const CountdownTimer = () => {
     if (!isReady) {
         return (
             <div className="w-full lg:w-[360px] xl:w-[380px] 2xl:w-[420px] mt-3 flex flex-col items-center gap-3 text-center">
-                <div className="w-full text-sm text-gray-700 font-medium text-center text-[#26292E]">
+                <div className="w-full text-sm  font-medium text-center text-[#26292E]">
                     Jarayid.com بدأ العدّ التنازلي لإطلاق
                 </div>
                 <div className="relative isolate flex w-full h-[90px] lg:h-[96px] items-center justify-center overflow-hidden rounded-[12px] shadow-[0_0_8.6px_rgba(0,0,0,0.12)] bg-gray-200 animate-pulse">
@@ -142,7 +142,7 @@ const CountdownTimer = () => {
 
     return (
         <div className="w-full lg:w-[360px] xl:w-[380px] 2xl:w-[420px] mt-3 flex flex-col items-center gap-3 text-center">
-            <div className="w-full text-sm text-gray-700 font-medium text-center text-[#26292E]">
+            <div className="w-full text-sm  font-medium text-center text-[#26292E]">
                 Jarayid.com بدأ العدّ التنازلي لإطلاق
             </div>
             <div className="relative isolate flex w-full h-[90px] lg:h-[96px] items-stretch overflow-hidden rounded-[12px] shadow-[0_0_8.6px_rgba(0,0,0,0.12)]">
@@ -242,8 +242,8 @@ export function HeaderContent() {
                             ))}
                         </div>
                         <div className="text-center w-full">
-                            <div className="text-base font-bold text-gray-800 mb-3">تابعنا</div>
-                            <div className="text-sm leading-relaxed">
+                            <div className="text-base font-bold text-[#26292E] mb-3">تابعنا</div>
+                            <div className="text-sm leading-relaxed text-[#26292E]">
                                 تابعونا على وسائل التواصل الاجتماعي<br />
                                 وكونوا أول من يعلم بالإطلاق<br />
                                 Jarayid.com
