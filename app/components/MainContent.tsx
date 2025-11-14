@@ -2,7 +2,7 @@
 
 export default function MainContent() {
     return (
-        <main className="w-full mt-3 lg:mt-11">
+        <main className="w-full mt-3 lg:mt-10">
             <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 mb-3">
                 {/* Flex layout for better alignment with header */}
                 <div className="w-full flex flex-col lg:flex-row gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 items-start">
