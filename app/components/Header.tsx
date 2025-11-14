@@ -182,14 +182,14 @@ export function HeaderContent() {
                     {/* Logo & Coming Soon */}
                     <div className="flex flex-col items-center gap-2 w-full">
                         <Link href={logoHref} className="inline-block">
-                            <h1 className={`text-[24px] sm:text-[28px] md:text-[32px] font-bold ${libreCaslonText.className} whitespace-nowrap`}>
+                            <h1 className={`text-[32px] sm:text-[40px] md:text-[48px] font-bold ${libreCaslonText.className} whitespace-nowrap`}>
                                 <span className="text-black">Jarayid</span>
                                 <span className="text-[#0866FF]">.com</span>
                             </h1>
                         </Link>
                         <div className={`text-center ${inter.className}`}>
                             <span className="text-[18px] sm:text-[20px] md:text-[24px] font-semibold text-gray-800">Coming </span>
-                            <span className="text-[18px] sm:text-[20px] md:text-[24px] font-semibold text-pink-500">Soon</span>
+                            <span className="text-[18px] sm:text-[20px] md:text-[24px] font-semibold text-red-500">Soon</span>
                         </div>
                     </div>
 
@@ -205,6 +205,8 @@ export function HeaderContent() {
                                 <a
                                     key={social.name}
                                     href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     aria-label={social.name}
                                     className="w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] rounded-full flex items-center justify-center text-white transition-transform hover:scale-110 shadow-sm"
                                     style={{ background: social.bg }}
@@ -214,7 +216,6 @@ export function HeaderContent() {
                             ))}
                         </div>
                         <div className="text-center w-full">
-                            <div className="text-sm md:text-base font-bold text-[#26292E] mb-2">تابعنا</div>
                             <div className="text-xs md:text-sm leading-relaxed text-[#26292E]">
                                 تابعونا على وسائل التواصل الاجتماعي<br />
                                 وكونوا أول من يعلم بالإطلاق<br />
@@ -228,11 +229,13 @@ export function HeaderContent() {
                 <div className="hidden lg:flex lg:justify-between lg:items-start relative">
                     {/* Left: Social Media */}
                     <div className="flex flex-col items-center gap-3 w-full max-w-[240px] flex-shrink-0">
-                        <div className="flex items-center gap-2.5 justify-center">
+                        <div className="flex items-center gap-2.5 justify-center mt-6">
                             {socialLinks.map((social) => (
                                 <a
                                     key={social.name}
                                     href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     aria-label={social.name}
                                     className="w-[30px] h-[30px] rounded-full flex items-center justify-center text-white transition-transform hover:scale-110 shadow-sm"
                                     style={{ background: social.bg }}
@@ -242,7 +245,6 @@ export function HeaderContent() {
                             ))}
                         </div>
                         <div className="text-center w-full">
-                            <div className="text-base font-bold text-[#26292E] mb-3">تابعنا</div>
                             <div className="text-sm leading-relaxed text-[#26292E]">
                                 تابعونا على وسائل التواصل الاجتماعي<br />
                                 وكونوا أول من يعلم بالإطلاق<br />
@@ -252,14 +254,14 @@ export function HeaderContent() {
                     </div>
 
                     {/* Center: Logo & Coming Soon - Absolutely Centered */}
-                    <div className="absolute left-1/2 -translate-x-1/2 xl:-translate-x-[60%] flex flex-col items-center gap-2 mt-6">
+                    <div className="absolute left-1/2 -translate-x-1/2 xl:-translate-x-[60%] flex flex-col items-center gap-0 mt-6">
                         <Link href={logoHref} className="inline-block">
-                            <h1 className={`text-[32px] xl:text-[36px] font-bold ${libreCaslonText.className} whitespace-nowrap`}>
+                            <h1 className={`text-[48px] xl:text-[56px] font-bold ${libreCaslonText.className} whitespace-nowrap`}>
                                 <span className="text-black">Jarayid</span>
                                 <span className="text-[#0866FF]">.com</span>
                             </h1>
                         </Link>
-                        <div className={`text-center mt-1 ${inter.className}`}>
+                        <div className={`text-center ${inter.className}`}>
                             <span className="text-[24px] xl:text-[26px] font-semibold text-gray-800">Coming </span>
                             <span className="text-[24px] xl:text-[26px] font-semibold text-red-500">Soon</span>
                         </div>
