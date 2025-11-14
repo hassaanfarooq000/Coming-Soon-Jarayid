@@ -34,10 +34,10 @@ export default function MainContent() {
                                     dir="rtl"
                                     className="text-right text-[0.7rem] sm:text-[0.72rem] lg:text-[0.74rem] xl:text-[0.78rem] 2xl:text-[0.84rem] text-gray-700 leading-[1.55] xl:leading-relaxed"
                                 >
-                                    <span className="block">
+                                    <span className="block font-bold">
                                         <bdi dir="ltr">Jarayid.com</bdi>&rlm; يضع اللّمسات الأخيرة على أول تطبيقٍ وموقعٍ إخباري عربي مؤتمت بالكامل،
                                     </span>
-                                    <span className="block">يعمل بالذكاء الاصطناعي من دون أيّ تدخّلٍ بشري،</span>
+                                    <span className="block">يعمل بالذكاء الاصطناعي <span className="font-bold">من دون أيّ تدخّلٍ بشري،</span></span>
                                     <span className="block">ليقدّم لكم تجربةً إخباريّة ذكيّة، سريعة، وشفّافة…</span>
                                 </div>
 
@@ -59,16 +59,16 @@ export default function MainContent() {
                                     className="text-right text-[0.7rem] sm:text-[0.72rem] lg:text-[0.74rem] xl:text-[0.78rem] 2xl:text-[0.84rem] text-gray-700 leading-[1.55] xl:leading-relaxed"
                                 >
                                     <span className="block">
-                                        <bdi dir="ltr">Jarayid.com</bdi>&rlm; قادمٌ إلى جَميعِ الدُّوَلِ العربيّةِ
+                                        <bdi dir="ltr" className="font-bold">Jarayid.com</bdi>&rlm; قادمٌ إلى جَميعِ الدُّوَلِ العربيّةِ
                                     </span>
-                                    <span className="block">
+                                    <span className="block font-bold">
                                         لبنان، الإمارات، مصر، السعودية، المغرب، الجزائر، سوريا، العراق، ليبيا، الأردن، اليمن، فلسطين، الكويت، قطر، البحرين، وتونس،
                                     </span>
                                     <span className="block">
-                                        إضافةً إلى أقسامٍ متنوّعة تشمل: البثّ المباشر، الاقتصاد، الرياضة، التكنولوجيا، الصحّة، أخبار العالم، المجتمع، البرامج الحوارية، البودكاست, صوتُ المجتمع,سجّل أنا عربي ونشرات <bdi dir="ltr">Jarayid AI</bdi>&rlm; الإخباريّة الذكيّة
+                                        <span className="font-bold">إضافةً إلى أقسامٍ متنوّعة تشمل: البثّ المباشر، الاقتصاد، الرياضة، التكنولوجيا، الصحّة، أخبار العالم، المجتمع، البرامج الحوارية، البودكاست,</span> <span className="font-bold">صوتُ</span> المجتمع,سجّل أنا عربي ونشرات <bdi dir="ltr">Jarayid AI</bdi>&rlm; الإخباريّة الذكيّة
                                     </span>
                                     <span className="block">
-                                        — <bdi dir="ltr">Jarayid.com</bdi>&rlm; متوفّر باللغتين العربية والإنجليزية
+                                        — <bdi dir="ltr">Jarayid.com</bdi>&rlm; <span className="font-bold">متوفّر باللغتين العربية والإنجليزية</span>
                                     </span>
                                     <span className="block">ومجّاني بالكامل</span>
                                 </div>
@@ -79,14 +79,11 @@ export default function MainContent() {
                                     className="flex flex-col gap-1.5 text-right text-[0.7rem] sm:text-[0.72rem] lg:text-[0.74rem] xl:text-[0.78rem] 2xl:text-[0.84rem] text-gray-700 leading-[1.55] xl:leading-relaxed"
                                 >
                                     <span className="font-bold mb-1">مميّزات <bdi dir="ltr">Jarayid.com</bdi>&rlm;</span>
-                                    <span>• مُيّزةُ تخصيصُ الأخبار:</span>
-                                    <span>مع <bdi dir="ltr">Jarayid.com</bdi>&rlm; ، أنتَ من يحدّد شكلَ خدمتك الإخباريّة. تختار الدولة التي تُريد،</span>
-                                    <span>وتُحدّد بنفسك الصحفَ والمواقعَ الموثوقة التي ترغب أن تصلك أخبارُها…</span>
-                                    <span>لتصلك فقط الأخبار التي تَهُمُّكَ, تماماً كما لو أنّك صمّمتَ منصّتَك الإخباريّة الخاصّة</span>
-                                    <span>• الإشعارات الذكية — تُبقيك <bdi dir="ltr">Jarayid.com</bdi>&rlm; على تواصلٍ فوريّ</span>
-                                    <span>• القارئ الذكي — ميزة مبتكرة تتيح لك الاستماع إلى أي خبرٍ صوتياً</span>
+                                    <span>• مُيّزةُ تخصيصُ الأخبار: مع <bdi dir="ltr">Jarayid.com</bdi>&rlm; ، أنتَ من يحدّد شكلَ خدمتك الإخباريّة. تختار الدولة التي تُريد، وتُحدّد بنفسك الصحفَ والمواقعَ الموثوقة التي ترغب أن تصلك أخبارُها… لتصلك فقط الأخبار التي تَهُمُّكَ, تماماً كما لو أنّك صمّمتَ منصّتَك الإخباريّة الخاصّة</span>
+                                    <span><span className="font-bold">• الإشعارات الذكية</span> — تُبقيك <bdi dir="ltr">Jarayid.com</bdi>&rlm; على تواصلٍ فوريّ</span>
+                                    <span><span className="font-bold">• القارئ الذكي</span> — ميزة مبتكرة تتيح لك <span className="font-bold">الاستماع إلى أي خبرٍ صوتياً</span></span>
                                     <span>بصوتٍ ذكريّ أو أنثويّ، لتبقى على اطلاع حتى أثناء القيادة أو العمل أو الراحة.</span>
-                                    <span>• ومع <bdi dir="ltr">Jarayid.ai</bdi>&rlm;، استمتع بنشراتٍ إخبارية يومية</span>
+                                    <span>• ومع <bdi dir="ltr" className="font-bold">Jarayid.ai</bdi>&rlm;، استمتع <span className="font-bold">بنشراتٍ إخبارية يومية</span></span>
                                     <span>بصوتٍ وصورةٍ من إنتاج الذكاء الاصطناعي —</span>
                                     <span>تواكب الحدث فور وقوعه.</span>
                                 </div>
