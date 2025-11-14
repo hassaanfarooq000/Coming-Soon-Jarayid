@@ -94,7 +94,7 @@ export default function MainContent() {
                                     className="flex flex-col gap-1.5 text-right text-[0.7rem] sm:text-[0.72rem] lg:text-[0.74rem] xl:text-[0.78rem] 2xl:text-[0.84rem] text-gray-700 leading-[1.55] xl:leading-relaxed"
                                 >
                                     <span className="block">تابعونا على وسائل التواصل الاجتماعي</span>
-                                    <span className="block">واشتركوا في قنواتنا الرسميّة عَلَى facebook, instagram, youtube, whatsapp ,X, tiktok الموجودة في الزاوية العُليا من الصفحة 👆</span>
+                                    <span className="block">واشتركوا في قنواتنا الرسميّة عَلَى facebook, instagram, youtube, whatsapp, X , tiktok الموجودة في الزاوية العُليا من الصفحة 👆</span>
                                     <span className="block">كونوا أوّل من يَعْلَمُ موعد إطلاق <bdi dir="ltr">Jarayid.com</bdi>&rlm;</span>
                                     <span className="block">واستعدّوا لعصرٍ جديدٍ من الصحافة العربيّ</span>
                                     <span className="block"><bdi dir="ltr">Jarayid.com</bdi>&rlm; تعيد تعريف الصحافة الرقميّة في العالم العربي</span>
