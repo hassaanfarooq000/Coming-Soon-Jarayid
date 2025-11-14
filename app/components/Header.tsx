@@ -98,6 +98,7 @@ const CountdownTimer = () => {
     const [isReady, setIsReady] = useState(false)
 
     useEffect(() => {
+        //Set the Target Date 
         const targetDate = new Date('2025-11-16T00:00:00')
 
         const calculateTime = () => {
@@ -194,9 +195,9 @@ export function HeaderContent() {
                     </div>
 
                     {/* Countdown Timer */}
-                    <div className="w-full max-w-md">
+                    {/* <div className="w-full max-w-md">
                         <CountdownTimer />
-                    </div>
+                    </div> */}
 
                     {/* Social Media */}
                     <div className="flex flex-col items-center gap-3 w-full max-w-sm">
@@ -268,9 +269,9 @@ export function HeaderContent() {
                     </div>
 
                     {/* Right: Countdown Timer */}
-                    <div className="flex-shrink-0">
+                    {/* <div className="flex-shrink-0">
                         <CountdownTimer />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </header>
