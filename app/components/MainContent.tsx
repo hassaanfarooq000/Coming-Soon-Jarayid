@@ -2,7 +2,7 @@
 
 export default function MainContent() {
     return (
-        <main className="w-full mt-3 lg:mt-10">
+        <main className="w-full mt-3 lg:mt-9">
             <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 mb-3">
                 {/* Flex layout for better alignment with header */}
                 <div className="w-full flex flex-col lg:flex-row gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 items-start">
@@ -10,7 +10,7 @@ export default function MainContent() {
                     <div className="relative w-full aspect-video lg:flex-1 lg:aspect-auto lg:h-[400px] xl:h-[460px] 2xl:h-[500px] rounded-[8px] overflow-hidden shadow-lg bg-gray-900">
                         <iframe
                             className="absolute inset-0 w-full h-full"
-                            src="https://www.youtube.com/embed/ka3RnEKCwWM"
+                            src="https://www.youtube.com/embed/b5bDFbN6dq4"
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
