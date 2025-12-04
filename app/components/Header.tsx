@@ -195,9 +195,9 @@ export function HeaderContent() {
                     </div>
 
                     {/* Countdown Timer */}
-                    {/* <div className="w-full max-w-md">
+                    <div className="w-full max-w-md">
                         <CountdownTimer />
-                    </div> */}
+                    </div> 
 
                     {/* Social Media */}
                     <div className="flex flex-col items-center gap-3 w-full max-w-sm">
