@@ -98,8 +98,8 @@ const CountdownTimer = () => {
     const [isReady, setIsReady] = useState(false)
 
     useEffect(() => {
-        //Set the Target Date - December 31st, 2025 at 8:00 AM Lebanon time (GMT+2)
-        const targetDate = new Date('2025-12-31T08:00:00+02:00')
+        //Set the Target Date - January 15th, 2026 at 8:00 AM Lebanon time (GMT+2)
+        const targetDate = new Date('2026-01-15T08:00:00+02:00')
 
         const calculateTime = () => {
             const now = new Date().getTime()
@@ -197,7 +197,7 @@ export function HeaderContent() {
                     {/* Countdown Timer */}
                     <div className="w-full max-w-md">
                         <CountdownTimer />
-                    </div> 
+                    </div>
 
                     {/* Social Media */}
                     <div className="flex flex-col items-center gap-3 w-full max-w-sm">
@@ -271,7 +271,7 @@ export function HeaderContent() {
                     {/* Right: Countdown Timer */}
                     <div className="flex-shrink-0">
                         <CountdownTimer />
-                    </div> 
+                    </div>
                 </div>
             </div>
         </header>
