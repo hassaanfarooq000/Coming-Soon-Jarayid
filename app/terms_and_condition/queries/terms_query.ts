@@ -5,7 +5,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
 export const getTermsAndConditions = async () => {
     return fetchJson<TermsApiResponse>(`${API_URL}/admin-dashboard/termsCondition`, {
-        cache: "no-store",
+        next: { revalidate: 0 } // Cache for 1 hour, then revalidate
     });
 };
 

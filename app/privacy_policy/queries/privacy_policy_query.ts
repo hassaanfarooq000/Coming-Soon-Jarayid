@@ -7,7 +7,7 @@ export const getPrivacyPolicy = async () => {
     return fetchJson<PrivacyPolicyApiResponse>(
         `${API_URL}/admin-dashboard/getPrivacyDetail`,
         {
-            cache: "no-store",
+            next: { revalidate: 0 } // Cache for 1 hour, then revalidate
         }
     );
 };
