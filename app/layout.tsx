@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-
+import type { Viewport } from "next";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -13,6 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 export const metadata: Metadata = {
   title: "Jarayid.com - Coming Soon",
   description: "Jarayid.com ‏ يضع اللّمسات الأخيرة على أول تطبيقٍ وموقعٍ إخباري عربي مؤتمت بالكامل،يعمل بالذكاء الاصطناعي من دون أيّ تدخّلٍ بشري،ليقدّم لكم تجربةً إخباريّة ذكيّة، سريعة،",
@@ -47,7 +53,7 @@ export const metadata: Metadata = {
     title: "Jarayid.com - Coming Soon",
     description: "Jarayid.com ‏ يضع اللّمسات الأخيرة على أول تطبيقٍ وموقعٍ إخباري عربي مؤتمت بالكامل،يعمل بالذكاء الاصطناعي من دون أيّ تدخّلٍ بشري،ليقدّم لكم تجربةً إخباريّة ذكيّة، سريعة،",
     siteName: "Jarayid.com",
-    url: "https://jarayid.com",
+    url: "https://www.jarayid.com",
   },
   twitter: {
     card: "summary_large_image",
@@ -55,12 +61,7 @@ export const metadata: Metadata = {
     description: "Jarayid.com ‏ يضع اللّمسات الأخيرة على أول تطبيقٍ وموقعٍ إخباري عربي مؤتمت بالكامل،يعمل بالذكاء الاصطناعي من دون أيّ تدخّلٍ بشري،ليقدّم لكم تجربةً إخباريّة ذكيّة، سريعة،",
   },
   alternates: {
-    canonical: "https://jarayid.com",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
+      canonical: "https://www.jarayid.com",
   },
   icons: {
     icon: [
