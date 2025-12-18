@@ -1,8 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Disable webpack cache to avoid memory issues on Windows
-
   async headers() {
     return [
       {
@@ -25,6 +23,14 @@ const nextConfig: NextConfig = {
               "form-action 'self'",
               "frame-ancestors 'self'"
             ].join("; "),
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=0, must-revalidate",
+          },
+          {
+            key: "X-Robots-Tag",
+            value: "index, follow",
           },
         ],
       },
