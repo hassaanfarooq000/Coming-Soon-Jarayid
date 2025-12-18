@@ -14,7 +14,54 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jarayid.com - Coming Soon"
+  title: "Jarayid.com - Coming Soon",
+  description: "Jarayid.com ‏ يضع اللّمسات الأخيرة على أول تطبيقٍ وموقعٍ إخباري عربي مؤتمت بالكامل،يعمل بالذكاء الاصطناعي من دون أيّ تدخّلٍ بشري،ليقدّم لكم تجربةً إخباريّة ذكيّة، سريعة،",
+  keywords: [
+    "Jarayid",
+    "أخبار عربية",
+    "إخباري عربي",
+    "ذكاء اصطناعي",
+    "AI news",
+    "Arabic news",
+    "automated news",
+    "news app",
+    "تطبيق أخبار",
+    "موقع إخباري",
+    "artificial intelligence",
+    "automation",
+    "news automation"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    title: "Jarayid.com - Coming Soon",
+    description: "Jarayid.com ‏ يضع اللّمسات الأخيرة على أول تطبيقٍ وموقعٍ إخباري عربي مؤتمت بالكامل،يعمل بالذكاء الاصطناعي من دون أيّ تدخّلٍ بشري،ليقدّم لكم تجربةً إخباريّة ذكيّة، سريعة،",
+    siteName: "Jarayid.com",
+    url: "https://jarayid.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jarayid.com - Coming Soon",
+    description: "Jarayid.com ‏ يضع اللّمسات الأخيرة على أول تطبيقٍ وموقعٍ إخباري عربي مؤتمت بالكامل،يعمل بالذكاء الاصطناعي من دون أيّ تدخّلٍ بشري،ليقدّم لكم تجربةً إخباريّة ذكيّة، سريعة،",
+  },
+  alternates: {
+    canonical: "https://jarayid.com",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
 };
 
 export default function RootLayout({
