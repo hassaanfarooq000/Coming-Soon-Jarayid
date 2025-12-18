@@ -20,8 +20,9 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 export const metadata: Metadata = {
-  title: "Jarayid.com - Coming Soon",
-  description: "Jarayid.com ‏ يضع اللّمسات الأخيرة على أول تطبيقٍ وموقعٍ إخباري عربي مؤتمت بالكامل،يعمل بالذكاء الاصطناعي من دون أيّ تدخّلٍ بشري،ليقدّم لكم تجربةً إخباريّة ذكيّة، سريعة،",
+  metadataBase: new URL("https://www.jarayid.com"),
+  title: "جرائد | منصة أخبار عربية مدعومة بالذكاء الاصطناعي",
+  description: "جرائد هي منصة أخبار عربية مدعومة بالذكاء الاصطناعي، تجمع وتلخّص الأخبار الموثوقة من مختلف أنحاء الشرق الأوسط والعالم. اقرأ أقل، وافهم أكثر، عندما تصبح الأخبار ذكية.",
   keywords: [
     "Jarayid",
     "أخبار عربية",
@@ -50,18 +51,18 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Jarayid.com - Coming Soon",
-    description: "Jarayid.com ‏ يضع اللّمسات الأخيرة على أول تطبيقٍ وموقعٍ إخباري عربي مؤتمت بالكامل،يعمل بالذكاء الاصطناعي من دون أيّ تدخّلٍ بشري،ليقدّم لكم تجربةً إخباريّة ذكيّة، سريعة،",
+    title: "جرائد | منصة أخبار عربية مدعومة بالذكاء الاصطناعي",
+    description: "جرائد هي منصة أخبار عربية مدعومة بالذكاء الاصطناعي، تجمع وتلخّص الأخبار الموثوقة من مختلف أنحاء الشرق الأوسط والعالم. اقرأ أقل، وافهم أكثر، عندما تصبح الأخبار ذكية.",
     siteName: "Jarayid.com",
     url: "https://www.jarayid.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jarayid.com - Coming Soon",
-    description: "Jarayid.com ‏ يضع اللّمسات الأخيرة على أول تطبيقٍ وموقعٍ إخباري عربي مؤتمت بالكامل،يعمل بالذكاء الاصطناعي من دون أيّ تدخّلٍ بشري،ليقدّم لكم تجربةً إخباريّة ذكيّة، سريعة،",
+    title: "جرائد | منصة أخبار عربية مدعومة بالذكاء الاصطناعي",
+    description: "جرائد هي منصة أخبار عربية مدعومة بالذكاء الاصطناعي، تجمع وتلخّص الأخبار الموثوقة من مختلف أنحاء الشرق الأوسط والعالم. اقرأ أقل، وافهم أكثر، عندما تصبح الأخبار ذكية.",
   },
   alternates: {
-      canonical: "https://www.jarayid.com",
+    canonical: "https://www.jarayid.com",
   },
   icons: {
     icon: [
@@ -89,9 +90,9 @@ export default function RootLayout({
   const gaTrackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
 
   return (
-    <html lang="en">
+    <html lang="en" dir="ltr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-y-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         {gaTrackingId && (
           <>
