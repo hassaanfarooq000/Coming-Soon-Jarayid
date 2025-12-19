@@ -40,12 +40,22 @@ export const metadata: Metadata = {
     description: "جرائد هي منصة أخبار عربية مدعومة بالذكاء الاصطناعي، تجمع وتلخّص الأخبار الموثوقة من مختلف أنحاء الشرق الأوسط والعالم. اقرأ أقل، وافهم أكثر، عندما تصبح الأخبار ذكية.",
     siteName: "Jarayid.com",
     url: "https://jarayid.com",
+     images: [
+     {
+      url: "/favicon-32x32.png", // relative path works for public folder
+      width: 1200,
+      height: 630,
+      alt: "جرائد | منصة أخبار عربية مدعومة بالذكاء الاصطناعي",
+    },
+    ],
   },
+  
   twitter: {
     card: "summary_large_image",
     title: "جرائد | منصة أخبار عربية مدعومة بالذكاء الاصطناعي",
     description: "جرائد هي منصة أخبار عربية مدعومة بالذكاء الاصطناعي، تجمع وتلخّص الأخبار الموثوقة من مختلف أنحاء الشرق الأوسط والعالم. اقرأ أقل، وافهم أكثر، عندما تصبح الأخبار ذكية.",
   },
+  
   alternates: {
     canonical: "https://jarayid.com",
   },
