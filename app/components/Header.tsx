@@ -88,89 +88,89 @@ const CountdownItem = ({ value, label }: CountdownItemProps) => (
 )
 
 // Countdown Timer Component
-const CountdownTimer = () => {
-    const [timeLeft, setTimeLeft] = useState({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0
-    })
-    const [isReady, setIsReady] = useState(false)
+// const CountdownTimer = () => {
+//     const [timeLeft, setTimeLeft] = useState({
+//         days: 0,
+//         hours: 0,
+//         minutes: 0,
+//         seconds: 0
+//     })
+//     const [isReady, setIsReady] = useState(false)
 
-    useEffect(() => {
-        //Set the Target Date - January 15th, 2026 at 8:00 AM Lebanon time (GMT+2)
-        const targetDate = new Date('2026-01-15T08:00:00+02:00')
+//     useEffect(() => {
+//         //Set the Target Date - January 15th, 2026 at 8:00 AM Lebanon time (GMT+2)
+//         const targetDate = new Date('2026-01-15T08:00:00+02:00')
 
-        const calculateTime = () => {
-            const now = new Date().getTime()
-            const distance = targetDate.getTime() - now
+//         const calculateTime = () => {
+//             const now = new Date().getTime()
+//             const distance = targetDate.getTime() - now
 
-            if (distance < 0) {
-                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-                setIsReady(true)
-                return
-            }
+//             if (distance < 0) {
+//                 setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+//                 setIsReady(true)
+//                 return
+//             }
 
-            setTimeLeft({
-                days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-                hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-                minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-                seconds: Math.floor((distance % (1000 * 60)) / 1000)
-            })
-            setIsReady(true)
-        }
+//             setTimeLeft({
+//                 days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+//                 hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+//                 minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+//                 seconds: Math.floor((distance % (1000 * 60)) / 1000)
+//             })
+//             setIsReady(true)
+//         }
 
-        // Calculate immediately
-        calculateTime()
+//         // Calculate immediately
+//         calculateTime()
 
-        // Then update every second
-        const timer = setInterval(calculateTime, 1000)
+//         // Then update every second
+//         const timer = setInterval(calculateTime, 1000)
 
-        return () => clearInterval(timer)
-    }, [])
+//         return () => clearInterval(timer)
+//     }, [])
 
-    if (!isReady) {
-        return (
-            <div className="w-full lg:w-[360px] xl:w-[380px] 2xl:w-[420px] mt-3 flex flex-col items-center gap-3 text-center">
-                <div className="w-full text-sm  font-medium text-center text-[#26292E]">
-                    Jarayid.com بدأ العدّ التنازلي لإطلاق
-                </div>
-                <div className="relative isolate flex w-full h-[90px] lg:h-[96px] items-center justify-center overflow-hidden rounded-[12px] shadow-[0_0_8.6px_rgba(0,0,0,0.12)] bg-gray-200 animate-pulse">
-                </div>
-            </div>
-        )
-    }
+//     if (!isReady) {
+//         return (
+//             <div className="w-full lg:w-[360px] xl:w-[380px] 2xl:w-[420px] mt-3 flex flex-col items-center gap-3 text-center">
+//                 <div className="w-full text-sm  font-medium text-center text-[#26292E]">
+//                     Jarayid.com بدأ العدّ التنازلي لإطلاق
+//                 </div>
+//                 <div className="relative isolate flex w-full h-[90px] lg:h-[96px] items-center justify-center overflow-hidden rounded-[12px] shadow-[0_0_8.6px_rgba(0,0,0,0.12)] bg-gray-200 animate-pulse">
+//                 </div>
+//             </div>
+//         )
+//     }
 
-    return (
-        <div className="w-full lg:w-[360px] xl:w-[380px] 2xl:w-[420px] mt-3 flex flex-col items-center gap-3 text-center">
-            <div className="w-full text-sm  font-medium text-center text-[#26292E]">
-                Jarayid.com بدأ العدّ التنازلي لإطلاق
-            </div>
-            <div className="relative isolate flex w-full h-[90px] lg:h-[96px] items-stretch overflow-hidden rounded-[12px] shadow-[0_0_8.6px_rgba(0,0,0,0.12)]">
-                <Image
-                    src="/bg-1.png"
-                    alt=""
-                    fill
-                    className="object-cover -z-10"
-                    priority
-                />
-                <CountdownItem value={timeLeft.days} label="Days" />
-                <CountdownItem value={timeLeft.hours} label="Hours" />
-                <CountdownItem value={timeLeft.minutes} label="Minutes" />
-                <div className="hidden lg:flex flex-1 border-r border-white/20 last:border-r-0">
-                    <div className="flex flex-col items-center justify-center flex-1 min-w-[80px] px-4 py-4">
-                        <div className="text-[32px] font-bold text-white leading-none mb-1">
-                            {String(timeLeft.seconds).padStart(2, '0')}
-                        </div>
-                        <div className="text-sm font-medium text-white/80">
-                            Seconds
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
+//     return (
+//         <div className="w-full lg:w-[360px] xl:w-[380px] 2xl:w-[420px] mt-3 flex flex-col items-center gap-3 text-center">
+//             <div className="w-full text-sm  font-medium text-center text-[#26292E]">
+//                 Jarayid.com بدأ العدّ التنازلي لإطلاق
+//             </div>
+//             <div className="relative isolate flex w-full h-[90px] lg:h-[96px] items-stretch overflow-hidden rounded-[12px] shadow-[0_0_8.6px_rgba(0,0,0,0.12)]">
+//                 <Image
+//                     src="/bg-1.png"
+//                     alt=""
+//                     fill
+//                     className="object-cover -z-10"
+//                     priority
+//                 />
+//                 <CountdownItem value={timeLeft.days} label="Days" />
+//                 <CountdownItem value={timeLeft.hours} label="Hours" />
+//                 <CountdownItem value={timeLeft.minutes} label="Minutes" />
+//                 <div className="hidden lg:flex flex-1 border-r border-white/20 last:border-r-0">
+//                     <div className="flex flex-col items-center justify-center flex-1 min-w-[80px] px-4 py-4">
+//                         <div className="text-[32px] font-bold text-white leading-none mb-1">
+//                             {String(timeLeft.seconds).padStart(2, '0')}
+//                         </div>
+//                         <div className="text-sm font-medium text-white/80">
+//                             Seconds
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     )
+// }
 
 export function HeaderContent() {
     const logoHref = '/'
