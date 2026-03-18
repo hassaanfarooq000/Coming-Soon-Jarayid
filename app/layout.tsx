@@ -20,24 +20,9 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.jarayid.com"),
+  metadataBase: new URL("https://jarayid.com"),
   title: "جرائد | منصة أخبار عربية مدعومة بالذكاء الاصطناعي",
   description: "جرائد هي منصة أخبار عربية مدعومة بالذكاء الاصطناعي، تجمع وتلخّص الأخبار الموثوقة من مختلف أنحاء الشرق الأوسط والعالم. اقرأ أقل، وافهم أكثر، عندما تصبح الأخبار ذكية.",
-  keywords: [
-    "Jarayid",
-    "أخبار عربية",
-    "إخباري عربي",
-    "ذكاء اصطناعي",
-    "AI news",
-    "Arabic news",
-    "automated news",
-    "news app",
-    "تطبيق أخبار",
-    "موقع إخباري",
-    "artificial intelligence",
-    "automation",
-    "news automation"
-  ],
   robots: {
     index: true,
     follow: true,
@@ -54,15 +39,25 @@ export const metadata: Metadata = {
     title: "جرائد | منصة أخبار عربية مدعومة بالذكاء الاصطناعي",
     description: "جرائد هي منصة أخبار عربية مدعومة بالذكاء الاصطناعي، تجمع وتلخّص الأخبار الموثوقة من مختلف أنحاء الشرق الأوسط والعالم. اقرأ أقل، وافهم أكثر، عندما تصبح الأخبار ذكية.",
     siteName: "Jarayid.com",
-    url: "https://www.jarayid.com",
+    url: "https://jarayid.com",
+     images: [
+     {
+      url: "/favicon-32x32.png", // relative path works for public folder
+      width: 1200,
+      height: 630,
+      alt: "جرائد | منصة أخبار عربية مدعومة بالذكاء الاصطناعي",
+    },
+    ],
   },
+  
   twitter: {
     card: "summary_large_image",
     title: "جرائد | منصة أخبار عربية مدعومة بالذكاء الاصطناعي",
     description: "جرائد هي منصة أخبار عربية مدعومة بالذكاء الاصطناعي، تجمع وتلخّص الأخبار الموثوقة من مختلف أنحاء الشرق الأوسط والعالم. اقرأ أقل، وافهم أكثر، عندما تصبح الأخبار ذكية.",
   },
+  
   alternates: {
-    canonical: "https://www.jarayid.com",
+    canonical: "https://jarayid.com",
   },
   icons: {
     icon: [
@@ -78,9 +73,6 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
 };
-// export const dynamic = "force-dynamic";
-// export const revalidate = 0;
-// export const fetchCache = "force-no-store";
 
 export default function RootLayout({
   children,
