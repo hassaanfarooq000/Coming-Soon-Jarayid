@@ -1,5 +1,3 @@
-import React from 'react'
-
 const DeleteAccountPage = () => {
     return (
         <div className="font-sans leading-relaxed mx-10 my-10 text-gray-800">
